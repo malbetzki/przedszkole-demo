@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przedszkole [NAZWA] — Warszawa Bemowo · wersja demonstracyjna</title>
+  <meta name="description" content="Przedszkole [NAZWA] na warszawskim Bemowie. Spokojna codzienność, adaptacja, wsparcie dzieci o różnych potrzebach i zajęcia dodatkowe.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Przedszkole [NAZWA] — Warszawa Bemowo">
+  <meta property="og:description" content="Przedszkole [NAZWA] na warszawskim Bemowie. Spokojna codzienność, adaptacja, wsparcie dzieci o różnych potrzebach i zajęcia dodatkowe.">
+  <meta property="og:image" content="img/hero.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#FAF7F2',
+            sand: '#F2ECE1',
+            beige: '#E6DDD0',
+            rose: '#EAD8D3',
+            roseDeep: '#D5B9B1',
+            sage: '#DCE5DF',
+            sageDeep: '#BFCBC3',
+            graphite: '#2B2E2D',
+            graphiteSoft: '#525755',
+            charcoal: '#262C2A'
+          },
+          fontFamily: {
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #2B2E2D;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Gwarancja widoczności treści niezależnie od skryptów */
+    [data-reveal] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img {
+      background-color: #E6DDD0;
+      color: #525755;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD ChildCare -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ChildCare",
+    "name": "Przedszkole [NAZWA]",
+    "description": "Przedszkole na warszawskim Bemowie. Spokojna codzienność, adaptacja, wsparcie dzieci o różnych potrzebach oraz zajęcia dodatkowe.",
+    "image": "img/hero.svg",
+    "telephone": "[TELEFON]",
+    "email": "[E-MAIL]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[ADRES]",
+      "addressLocality": "Warszawa",
+      "addressRegion": "Bemowo",
+      "addressCountry": "PL"
+    }
+  }
+  </script>
+</head>
+<body class="min-w-[360px] antialiased selection:bg-rose selection:text-graphite">
+  <!-- Pasek informacyjny: wersja demonstracyjna -->
+  <div class="bg-graphite text-base text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-2.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+      <span class="uppercase tracking-widest text-sageDeep">Projekt demonstracyjny</span>
+      <span class="text-beige/80">treści, dane kontaktowe i zdjęcia są przykładowe — strona pokazuje kierunek, nie finalną realizację.</span>
+    </div>
+  </div>
+
+
+  <!-- Link pomijania nawigacji -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-graphite focus:text-base focus:px-5 focus:py-3 focus:rounded-xl">
+    Przejdź do głównej treści
+  </a>
+
+  <!-- Nagłówek i nawigacja -->
+  <header class="sticky top-0 z-40 bg-base/95 backdrop-blur-md border-b border-beige">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <!-- Logo tekstowe -->
+        <a href="#" class="group focus:outline-none">
+          <span class="block font-serif text-2xl sm:text-3xl tracking-tight text-graphite font-medium">
+            [NAZWA]
+          </span>
+          <span class="block text-xs tracking-widest uppercase text-graphiteSoft mt-0.5">
+            Przedszkole · Warszawa Bemowo
+          </span>
+        </a>
+
+        <!-- Nawigacja desktopowa -->
+        <nav aria-label="Główna nawigacja" class="hidden xl:flex items-center gap-7 text-base font-medium text-graphite">
+          <a href="#o-przedszkolu" class="hover:text-graphiteSoft transition-colors py-2">O przedszkolu</a>
+          <a href="#jak-pracujemy" class="hover:text-graphiteSoft transition-colors py-2">Jak pracujemy</a>
+          <a href="#kuchnia" class="hover:text-graphiteSoft transition-colors py-2">Kuchnia</a>
+          <a href="#dla-rodzicow" class="hover:text-graphiteSoft transition-colors py-2">Dla rodziców</a>
+          <a href="#porady" class="hover:text-graphiteSoft transition-colors py-2">Porady</a>
+          <a href="#rekrutacja" class="hover:text-graphiteSoft transition-colors py-2">Rekrutacja</a>
+          <a href="#kontakt" class="ml-2 px-5 py-2.5 rounded-full bg-sage hover:bg-sageDeep text-graphite transition-colors">
+            Kontakt
+          </a>
+        </nav>
+
+        <!-- Przycisk menu mobilnego -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="xl:hidden inline-flex items-center justify-center px-4 py-2.5 rounded-full border border-beige bg-sand text-graphite text-sm font-medium focus:outline-none focus:ring-2 focus:ring-graphite"
+        >
+          <span id="mobile-menu-label">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Rozwijane menu mobilne -->
+    <nav
+      id="mobile-menu"
+      aria-label="Nawigacja mobilna"
+      class="hidden xl:hidden border-t border-beige bg-base px-5 pt-6 pb-10 max-h-[85vh] overflow-y-auto"
+    >
+      <div class="max-w-lg mx-auto space-y-6">
+        <div class="grid grid-cols-2 gap-2.5 pb-4 border-b border-beige">
+          <a href="#rekrutacja" class="mobile-link px-4 py-3 rounded-xl bg-rose/60 text-graphite text-sm font-medium">Rekrutacja</a>
+          <a href="#jadlospis" class="mobile-link px-4 py-3 rounded-xl bg-sage/60 text-graphite text-sm font-medium">Jadłospis</a>
+          <a href="#kalendarz" class="mobile-link px-4 py-3 rounded-xl bg-sand text-graphite text-sm font-medium">Kalendarz</a>
+          <a href="#porady" class="mobile-link px-4 py-3 rounded-xl bg-beige/70 text-graphite text-sm font-medium">Porady</a>
+        </div>
+
+        <ul class="space-y-5 text-graphite">
+          <li>
+            <a href="#o-przedszkolu" class="mobile-link block text-lg font-medium">O przedszkolu</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Historia · Misja</p>
+          </li>
+          <li>
+            <a href="#jak-pracujemy" class="mobile-link block text-lg font-medium">Jak pracujemy</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Codzienność · Adaptacja · Zajęcia · Wsparcie indywidualne</p>
+          </li>
+          <li>
+            <a href="#kuchnia" class="mobile-link block text-lg font-medium">Kuchnia</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Żywienie · Jadłospis</p>
+          </li>
+          <li>
+            <a href="#dla-rodzicow" class="mobile-link block text-lg font-medium">Dla rodziców</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Aktualności · Kalendarz · Sprawy organizacyjne</p>
+          </li>
+          <li>
+            <a href="#porady" class="mobile-link block text-lg font-medium">Porady</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Artykuły zespołu</p>
+          </li>
+          <li>
+            <a href="#rekrutacja" class="mobile-link block text-lg font-medium">Rekrutacja</a>
+            <p class="text-sm text-graphiteSoft mt-0.5">Zasady · Dokumenty</p>
+          </li>
+          <li class="pt-2">
+            <a href="#kontakt" class="mobile-link inline-block w-full text-center py-3.5 rounded-full bg-graphite text-base font-medium">
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO + DROGI NA SKRÓTY Z GÓRY -->
+    <section class="pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28 px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Górne drogi do najważniejszych sekcji -->
+        <nav aria-label="Szybki dostęp dla rodziców" data-reveal class="mb-12 lg:mb-16">
+          <p class="text-xs uppercase tracking-widest text-graphiteSoft mb-4">
+            Szybkie ścieżki dla rodziców
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+            <a href="#rekrutacja" class="group p-5 rounded-2xl bg-rose/55 hover:bg-rose transition-colors border border-roseDeep/40 flex flex-col justify-between">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Zasady i dokumenty</span>
+              <span class="font-serif text-xl text-graphite mt-2 flex items-center justify-between">
+                <span>Rekrutacja</span>
+                <span aria-hidden="true" class="text-base group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </a>
+
+            <a href="#jadlospis" class="group p-5 rounded-2xl bg-sage/60 hover:bg-sage transition-colors border border-sageDeep/50 flex flex-col justify-between">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Żywienie i rytm posiłków</span>
+              <span class="font-serif text-xl text-graphite mt-2 flex items-center justify-between">
+                <span>Jadłospis</span>
+                <span aria-hidden="true" class="text-base group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </a>
+
+            <a href="#kalendarz" class="group p-5 rounded-2xl bg-sand hover:bg-beige transition-colors border border-beige flex flex-col justify-between">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Wydarzenia i organizacja</span>
+              <span class="font-serif text-xl text-graphite mt-2 flex items-center justify-between">
+                <span>Kalendarz</span>
+                <span aria-hidden="true" class="text-base group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </a>
+
+            <a href="#porady" class="group p-5 rounded-2xl bg-sand hover:bg-beige transition-colors border border-beige flex flex-col justify-between">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Artykuły naszego zespołu</span>
+              <span class="font-serif text-xl text-graphite mt-2 flex items-center justify-between">
+                <span>Porady</span>
+                <span aria-hidden="true" class="text-base group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Główna treść Hero -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div data-reveal class="lg:col-span-7 space-y-6 sm:space-y-8">
+            <p class="inline-block px-4 py-1.5 rounded-full bg-sand border border-beige text-sm text-graphiteSoft">
+              Warszawa · Bemowo
+            </p>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.15] text-graphite font-normal">
+              Spokojna codzienność i miejsce dla dzieci, które potrzebują własnego tempa.
+            </h1>
+            <p class="text-lg sm:text-xl text-graphiteSoft leading-relaxed max-w-2xl">
+              Tworzymy na Bemowie przedszkole oparte na przewidywalnym rytmie dnia, uważnej adaptacji i wsparciu dzieci o różnych potrzebach. Bez pośpiechu pomagamy budować poczucie bezpieczeństwa w grupie.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#rekrutacja" class="px-7 py-4 rounded-full bg-graphite text-base font-medium hover:bg-graphiteSoft transition-colors">
+                Poznaj zasady rekrutacji
+              </a>
+              <a href="#jak-pracujemy" class="px-7 py-4 rounded-full bg-sand border border-beige text-graphite font-medium hover:bg-beige transition-colors">
+                Zobacz, jak pracujemy
+              </a>
+            </div>
+          </div>
+
+          <div data-reveal class="lg:col-span-5">
+            <figure class="rounded-3xl overflow-hidden border border-beige bg-sand aspect-[4/3] lg:aspect-[4/5]">
+              <img
+                src="img/hero.svg"
+                alt="Jasna, przestronna sala przedszkolna w naturalnym świetle z drewnianymi regałami, miękkim dywanem i kącikami do swobodnej zabawy, bez widocznych twarzy"
+                class="w-full h-full object-cover"
+              >
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- O PRZEDSZKOLU (Historia, Misja) -->
+    <section id="o-przedszkolu" class="py-16 sm:py-24 lg:py-28 bg-sand/70 border-y border-beige px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <div data-reveal class="lg:col-span-5 space-y-6">
+            <p class="text-xs uppercase tracking-widest text-graphiteSoft">O przedszkolu</p>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+              Blisko domu na Bemowie, w rytmie dopasowanym do dzieci.
+            </h2>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Wiemy, że pierwsze doświadczenia poza domem są ważne dla całej rodziny. Dlatego budujemy przestrzeń, w której rodzice mają jasny wgląd w życie przedszkola, a dzieci zyskują czas na spokojne poznawanie świata.
+            </p>
+            <figure class="rounded-3xl overflow-hidden border border-beige bg-beige aspect-[16/11] pt-2">
+              <img
+                src="img/zespol.svg"
+                alt="Ujęcie z boku i z góry na dłonie nauczycieli oraz dzieci siedzących w kręgu na jasnym dywanie podczas spokojnej aktywności, bez czytelnych twarzy"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              >
+            </figure>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 gap-8 lg:pl-8">
+            <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-base border border-beige space-y-4">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-rose/60 text-graphite">
+                Historia
+              </span>
+              <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+                Skąd wziął się pomysł na [NAZWA]
+              </h3>
+              <p class="text-lg text-graphiteSoft leading-relaxed">
+                Przedszkole [NAZWA] powstało na Bemowie z myślą o rodzinach szukających miejsca kameralnego, pozbawionego nadmiaru bodźców i pośpiechu. Zależało nam na stworzeniu wnętrz oraz ogrodu, które sprzyjają wyciszeniu i swobodnej zabawie.
+              </p>
+              <p class="text-lg text-graphiteSoft leading-relaxed">
+                Od początku budujemy zespół osób, które potrafią uważnie obserwować grupę i wspierać zarówno dzieci otwarte na nowe sytuacje, jak i te, które potrzebują więcej czasu na oswojenie zmiany.
+              </p>
+            </article>
+
+            <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-base border border-beige space-y-4">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-sage/70 text-graphite">
+                Misja
+              </span>
+              <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+                Co jest dla nas najważniejsze w pracy z dziećmi
+              </h3>
+              <p class="text-lg text-graphiteSoft leading-relaxed">
+                Naszą misją jest towarzyszenie dziecku w codziennym rozwoju z poszanowaniem jego granic, gotowości emocjonalnej i potrzeb sensorycznych. Nie przyspieszamy naturalnych etapów i nie porównujemy dzieci między sobą.
+              </p>
+              <p class="text-lg text-graphiteSoft leading-relaxed">
+                Współpracujemy z rodzicami w atmosferze dialogu, dzieląc się obserwacjami z codziennego funkcjonowania dziecka w sali i na świeżym powietrzu.
+              </p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK PRACUJEMY (Codzienność, Adaptacja, Zajęcia, Wsparcie indywidualne) -->
+    <section id="jak-pracujemy" class="py-16 sm:py-24 lg:py-28 px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto space-y-14">
+
+        <div data-reveal class="max-w-3xl space-y-4">
+          <p class="text-xs uppercase tracking-widest text-graphiteSoft">Jak pracujemy</p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+            Cztery filary naszej codziennej pracy na Bemowie.
+          </h2>
+          <p class="text-lg sm:text-xl text-graphiteSoft leading-relaxed">
+            Każdy dzień w [NAZWA] ma czytelną strukturę. Dzięki temu dzieci wiedzą, czego mogą się spodziewać, co buduje ich spokój i otwartość na wspólne działania.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- 1. Codzienność -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-sand/80 border border-beige space-y-4">
+            <span class="text-xs uppercase tracking-widest text-graphiteSoft">01 · Codzienność</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Stały rytm dnia, zabawa i odpoczynek
+            </h3>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Dzień dzielimy na przejrzyste etapy: spokojne powitanie, pracę własną i swobodną zabawę w sali, wspólne posiłki, wyjście na zewnątrz oraz popołudniowe wyciszenie.
+            </p>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Dbamy o to, aby pomiędzy aktywnościami dzieci miały czas na odpoczynek i samodzielny wybór zajęcia.
+            </p>
+          </article>
+
+          <!-- 2. Adaptacja -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-rose/45 border border-roseDeep/40 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-graphiteSoft">02 · Adaptacja</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Łagodne wejście w nowe środowisko
+            </h3>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Adaptację planujemy wspólnie z rodzicami. Dziecko poznaje salę, opiekunów oraz inne dzieci stopniowo, w obecności bliskiej osoby dorosłej.
+            </p>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Uważnie obserwujemy sygnały zmęczenia i napięcia, dostosowując czas pobytu do aktualnej gotowości dziecka.
+            </p>
+          </article>
+
+          <!-- 3. Zajęcia -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-sage/55 border border-sageDeep/50 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-graphiteSoft">03 · Zajęcia</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Zajęcia dodatkowe bez presji
+            </h3>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Zajęcia dodatkowe traktujemy jako zaproszenie do odkrywania ruchu, muzyki, plastyki oraz przyrody. Są one naturalnie wplecione w rytm tygodnia.
+            </p>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Dziecko może włączyć się w aktywność od razu lub najpierw przyglądać się jej z boku, dopóki nie poczuje się pewnie.
+            </p>
+          </article>
+
+          <!-- 4. Wsparcie indywidualne -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-sand/80 border border-beige space-y-4">
+            <span class="text-xs uppercase tracking-widest text-graphiteSoft">04 · Wsparcie indywidualne</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Wsparcie dzieci o różnych potrzebach
+            </h3>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              W naszym zespole pracują nauczyciele oraz specjaliści wspierający rozwój emocjonalny, komunikacyjny i sensoryczny dzieci.
+            </p>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Szczególną troską otaczamy dzieci, które potrzebują więcej czasu w grupie, spokojniejszego komunikatu lub mniejszej liczby bodźców w ciągu dnia.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CIEMNIEJSZY BLOK DLA RYTMU — Wsparcie dzieci potrzebujących więcej czasu w grupie -->
+    <section class="py-16 sm:py-24 lg:py-28 bg-charcoal text-base px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div data-reveal class="lg:col-span-7 space-y-6">
+            <p class="text-xs uppercase tracking-widest text-sageDeep">
+              Uważność na tempo dziecka
+            </p>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight font-normal text-base">
+              Nie każde dziecko od razu czuje się swobodnie w większej grupie.
+            </h2>
+            <p class="text-lg sm:text-xl text-beige leading-relaxed">
+              Rodzice z Bemowa często pytają nas, czy ich dziecko poradzi sobie w przedszkolu, jeśli bywa nieśmiałe, wysoko wrażliwe lub szybciej męczy się hałasem. W [NAZWA] traktujemy te cechy jako naturalną część różnorodności grupy.
+            </p>
+            <p class="text-lg text-beige/90 leading-relaxed">
+              W salach wydzielamy strefy wyciszenia, w których można odpocząć od wspólnej aktywności, a dorośli pomagają dzieciom nazywać emocje i budować relacje w małych krokach.
+            </p>
+          </div>
+
+          <div data-reveal class="lg:col-span-5 space-y-4">
+            <div class="p-7 rounded-2xl bg-graphite border border-graphiteSoft/40 space-y-2">
+              <h3 class="font-serif text-xl text-rose">Spokojna komunikacja</h3>
+              <p class="text-base text-beige/90 leading-relaxed">
+                Rozmawiamy z dziećmi łagodnym tonem, uprzedzamy o zmianach aktywności i dajemy czas na dokończenie rozpoczętej zabawy.
+              </p>
+            </div>
+            <div class="p-7 rounded-2xl bg-graphite border border-graphiteSoft/40 space-y-2">
+              <h3 class="font-serif text-xl text-sage">Praca w mniejszych podgrupach</h3>
+              <p class="text-base text-beige/90 leading-relaxed">
+                Część zajęć prowadzimy w kameralnych grupach, aby dzieci czuły się zauważone i miały przestrzeń na własną wypowiedź.
+              </p>
+            </div>
+            <div class="p-7 rounded-2xl bg-graphite border border-graphiteSoft/40 space-y-2">
+              <h3 class="font-serif text-xl text-beige">Stały kontakt z rodzicami</h3>
+              <p class="text-base text-beige/90 leading-relaxed">
+                Na bieżąco omawiamy samopoczucie dziecka i wspólnie szukamy rozwiązań, które wspierają je zarówno w przedszkolu, jak i w domu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KUCHNIA (Żywienie, Jadłospis — układ posiłków) -->
+    <section id="kuchnia" class="py-16 sm:py-24 lg:py-28 px-5 sm:px-8 lg:px-12 bg-base">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div data-reveal class="lg:col-span-6 space-y-6">
+            <p class="text-xs uppercase tracking-widest text-graphiteSoft">Kuchnia i żywienie</p>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+              Posiłki spożywane w spokoju, z szacunkiem do potrzeb żywieniowych.
+            </h2>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Wspólny stół to dla nas ważny moment dnia, ale nigdy pole do pośpiechu czy zmuszania do jedzenia. Dzieci same decydują o wielkości porcji, ucząc się rozpoznawać sygnały głodu i sytości.
+            </p>
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Uwzględniamy alergie pokarmowe, nietolerancje oraz diety eliminacyjne zgłaszane przez rodziców, dbając o to, by każde dziecko przy stole czuło się bezpiecznie.
+            </p>
+          </div>
+
+          <div data-reveal class="lg:col-span-6">
+            <figure class="rounded-3xl overflow-hidden border border-beige bg-sand aspect-[16/10]">
+              <img
+                src="img/kuchnia.svg"
+                alt="Jasna jadalnia przedszkolna z drewnianymi stołami nakrytymi do posiłku, widoczne naczynia i dzbanki z wodą w ciepłym świetle, bez widocznych twarzy"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              >
+            </figure>
+          </div>
+        </div>
+
+        <!-- Jadłospis — układ posiłków (bez konkretnych dań) -->
+        <div id="jadlospis" data-reveal class="p-8 sm:p-12 rounded-3xl bg-sand border border-beige space-y-8">
+          <div class="max-w-3xl space-y-3">
+            <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-sage text-graphite">
+              Jadłospis · Układ dnia
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Rytm posiłków w ciągu dnia
+            </h3>
+            <p class="text-base sm:text-lg text-graphiteSoft leading-relaxed">
+              Poniższy układ pokazuje stałą strukturę posiłków w przedszkolu. Szczegółowy jadłospis na bieżący tydzień przekazujemy rodzicom w materiałach informacyjnych.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="p-6 rounded-2xl bg-base border border-beige flex flex-col justify-between space-y-4">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Posiłek I</span>
+              <div>
+                <h4 class="font-serif text-xl text-graphite">Śniadanie</h4>
+                <p class="text-sm text-graphiteSoft mt-2 leading-relaxed">
+                  Poranny posiłek rozpoczynający wspólny dzień przy stole, przygotowany w formie zachęcającej do samodzielnego wyboru składników.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-base border border-beige flex flex-col justify-between space-y-4">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Posiłek II</span>
+              <div>
+                <h4 class="font-serif text-xl text-graphite">Drugie śniadanie</h4>
+                <p class="text-sm text-graphiteSoft mt-2 leading-relaxed">
+                  Lekka przedpołudniowa przekąska warzywno-owocowa podawana przed wyjściem do ogrodu lub na spacer.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-base border border-beige flex flex-col justify-between space-y-4">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Posiłek III · Część 1</span>
+              <div>
+                <h4 class="font-serif text-xl text-graphite">Obiad — zupa</h4>
+                <p class="text-sm text-graphiteSoft mt-2 leading-relaxed">
+                  Ciepła zupa podawana w środku dnia, pozwalająca na spokojne uzupełnienie energii po aktywności na świeżym powietrzu.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-base border border-beige flex flex-col justify-between space-y-4">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Posiłek III · Część 2</span>
+              <div>
+                <h4 class="font-serif text-xl text-graphite">Obiad — drugie danie</h4>
+                <p class="text-sm text-graphiteSoft mt-2 leading-relaxed">
+                  Danie główne z dodatkiem warzyw i produktów zbożowych, serwowane po odpoczynku lub wyciszeniu.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-base border border-beige flex flex-col justify-between space-y-4">
+              <span class="text-xs uppercase tracking-wider text-graphiteSoft">Posiłek IV</span>
+              <div>
+                <h4 class="font-serif text-xl text-graphite">Podwieczorek</h4>
+                <p class="text-sm text-graphiteSoft mt-2 leading-relaxed">
+                  Popołudniowy posiłek przed powrotem do domu. Przez cały dzień w salach dzieci mają również stały dostęp do wody.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DLA RODZICÓW (Aktualności, Kalendarz, Sprawy organizacyjne) -->
+    <section id="dla-rodzicow" class="py-16 sm:py-24 lg:py-28 bg-sand/60 border-y border-beige px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto space-y-14">
+
+        <div data-reveal class="max-w-3xl space-y-4">
+          <p class="text-xs uppercase tracking-widest text-graphiteSoft">Dla rodziców</p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+            Wszystkie sprawy organizacyjne i rytm roku w jednym miejscu.
+          </h2>
+          <p class="text-lg text-graphiteSoft leading-relaxed">
+            Dbamy o przejrzystą komunikację z rodzinami. Poniżej zebraliśmy najważniejsze obszary dotyczące codziennej współpracy, wydarzeń oraz życia przedszkola.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <!-- Aktualności -->
+          <article data-reveal class="p-8 sm:p-9 rounded-3xl bg-base border border-beige flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-rose/60 text-graphite">
+                Aktualności
+              </span>
+              <h3 class="font-serif text-2xl text-graphite font-normal">
+                Z życia grup przedszkolnych
+              </h3>
+              <p class="text-base text-graphiteSoft leading-relaxed">
+                W tej sekcji publikujemy bieżące informacje o tematach przewodnich realizowanych w grupach, działaniach w ogrodzie oraz inicjatywach dla rodzin z Bemowa.
+              </p>
+            </div>
+            <ul class="space-y-3 pt-4 border-t border-beige text-sm text-graphite">
+              <li class="flex items-start justify-between gap-4">
+                <span>Spotkania informacyjne dla nowych rodzin</span>
+                <span class="text-graphiteSoft shrink-0">Bieżące ogłoszenie</span>
+              </li>
+              <li class="flex items-start justify-between gap-4">
+                <span>Przygotowanie przestrzeni ogrodowej do sezonu</span>
+                <span class="text-graphiteSoft shrink-0">Życie przedszkola</span>
+              </li>
+              <li class="flex items-start justify-between gap-4">
+                <span>Konsultacje indywidualne z zespołem</span>
+                <span class="text-graphiteSoft shrink-0">Dla rodziców</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Kalendarz -->
+          <article id="kalendarz" data-reveal class="p-8 sm:p-9 rounded-3xl bg-base border border-beige flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-sage/70 text-graphite">
+                Kalendarz
+              </span>
+              <h3 class="font-serif text-2xl text-graphite font-normal">
+                Stałe punkty w kalendarzu przedszkola
+              </h3>
+              <p class="text-base text-graphiteSoft leading-relaxed">
+                Planujemy wydarzenia z wyprzedzeniem, tak aby rodzice mogli spokojnie zaplanować swój udział w spotkaniach i rozmowach.
+              </p>
+            </div>
+            <ul class="space-y-3 pt-4 border-t border-beige text-sm text-graphite">
+              <li class="flex items-start justify-between gap-4">
+                <span>Zajęcia i wizyty adaptacyjne</span>
+                <span class="text-graphiteSoft shrink-0">Po umówieniu</span>
+              </li>
+              <li class="flex items-start justify-between gap-4">
+                <span>Spotkania podsumowujące pracę w grupach</span>
+                <span class="text-graphiteSoft shrink-0">Cyklicznie</span>
+              </li>
+              <li class="flex items-start justify-between gap-4">
+                <span>Spokojne spotkania rodzinne w ogrodzie</span>
+                <span class="text-graphiteSoft shrink-0">Sezonowo</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Sprawy organizacyjne -->
+          <article data-reveal class="p-8 sm:p-9 rounded-3xl bg-base border border-beige flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-sand border border-beige text-graphite">
+                Sprawy organizacyjne
+              </span>
+              <h3 class="font-serif text-2xl text-graphite font-normal">
+                Codzienna organizacja i wyprawka
+              </h3>
+              <p class="text-base text-graphiteSoft leading-relaxed">
+                Przejrzyste zasady pomagają zachować porządek dnia i dają rodzicom pewność w codziennych sytuacjach.
+              </p>
+            </div>
+            <ul class="space-y-3 pt-4 border-t border-beige text-sm text-graphite">
+              <li>Wyprawka: wygodne ubrania na zmianę i odzież dostosowana do wyjść na zewnątrz.</li>
+              <li>Komunikacja: zgłaszanie nieobecności oraz potrzeb żywieniowych bezpośrednio do zespołu.</li>
+              <li>Bezpieczeństwo: jasne procedury przyprowadzania i odbierania dzieci przez upoważnione osoby.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORADY (Artykuły zespołu) -->
+    <section id="porady" class="py-16 sm:py-24 lg:py-28 px-5 sm:px-8 lg:px-12 bg-base">
+      <div class="max-w-7xl mx-auto space-y-14">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+          <div data-reveal class="lg:col-span-7 space-y-4">
+            <p class="text-xs uppercase tracking-widest text-graphiteSoft">Porady · Artykuły zespołu</p>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+              Wiedza i doświadczenie zespołu, którymi dzielimy się z rodzicami.
+            </h2>
+          </div>
+          <div data-reveal class="lg:col-span-5">
+            <p class="text-lg text-graphiteSoft leading-relaxed">
+              Piszemy o adaptacji, emocjach, codziennych rytuałach i wspieraniu dzieci, które potrzebują więcej czasu na odnalezienie się w grupie.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
+          <!-- Zdjęcie sekcji porad -->
+          <div data-reveal class="lg:col-span-4">
+            <figure class="h-full min-h-[280px] rounded-3xl overflow-hidden border border-beige bg-sand">
+              <img
+                src="img/porady.svg"
+                alt="Zbliżenie na dłonie dorosłego i dziecka układające drewniane materiały edukacyjne na jasnym blacie stolika, bez widocznych twarzy"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              >
+            </figure>
+          </div>
+
+          <!-- Karty artykułów zespołu -->
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <article data-reveal class="p-7 rounded-3xl bg-sand/75 border border-beige flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <span class="text-xs uppercase tracking-wider text-graphiteSoft">Adaptacja</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-graphite font-normal leading-snug">
+                  Jak wspierać dziecko w pierwszych tygodniach w przedszkolu
+                </h3>
+                <p class="text-base text-graphiteSoft leading-relaxed">
+                  O roli spokojnych pożegnań, przewidywalnych pór powrotu do domu oraz akceptacji dziecięcych emocji.
+                </p>
+              </div>
+              <p class="text-xs uppercase tracking-widest text-graphiteSoft pt-4 border-t border-beige">
+                Autor: Zespół [NAZWA]
+              </p>
+            </article>
+
+            <article data-reveal class="p-7 rounded-3xl bg-rose/40 border border-roseDeep/40 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <span class="text-xs uppercase tracking-wider text-graphiteSoft">Relacje w grupie</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-graphite font-normal leading-snug">
+                  Gdy dziecko potrzebuje więcej czasu, by dołączyć do wspólnej zabawy
+                </h3>
+                <p class="text-base text-graphiteSoft leading-relaxed">
+                  Dlaczego obserwacja z boku jest ważnym etapem budowania poczucia bezpieczeństwa i jak jej nie pospieszać.
+                </p>
+              </div>
+              <p class="text-xs uppercase tracking-widest text-graphiteSoft pt-4 border-t border-roseDeep/40">
+                Autor: Zespół [NAZWA]
+              </p>
+            </article>
+
+            <article data-reveal class="p-7 rounded-3xl bg-sage/50 border border-sageDeep/50 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <span class="text-xs uppercase tracking-wider text-graphiteSoft">Codzienność</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-graphite font-normal leading-snug">
+                  Jak wyciszyć nadmiar bodźców po dniu pełnym wrażeń
+                </h3>
+                <p class="text-base text-graphiteSoft leading-relaxed">
+                  Proste sposoby na spokojne popołudnie po powrocie z przedszkola i zadbanie o równowagę sensoryczną dziecka.
+                </p>
+              </div>
+              <p class="text-xs uppercase tracking-widest text-graphiteSoft pt-4 border-t border-sageDeep/50">
+                Autor: Zespół [NAZWA]
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REKRUTACJA (Zasady, Dokumenty) -->
+    <section id="rekrutacja" class="py-16 sm:py-24 lg:py-28 bg-rose/35 border-t border-roseDeep/40 px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto space-y-12">
+
+        <div data-reveal class="max-w-3xl space-y-4">
+          <p class="text-xs uppercase tracking-widest text-graphiteSoft">Rekrutacja</p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+            Przejrzyste zasady przyjęcia i spokojna rozmowa na start.
+          </h2>
+          <p class="text-lg text-graphiteSoft leading-relaxed">
+            Zależy nam, aby decyzja o wyborze przedszkola była komfortowa dla rodziców. Proces rekrutacji opieramy na bezpośrednim spotkaniu i poznaniu potrzeb dziecka.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          <!-- Zasady rekrutacji -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-base border border-beige space-y-6">
+            <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-rose text-graphite">
+              Zasady
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+              Jak przebiega rekrutacja krok po kroku
+            </h3>
+            <ol class="space-y-4 text-base sm:text-lg text-graphiteSoft">
+              <li class="flex gap-4">
+                <span class="font-serif text-xl text-graphite shrink-0">1.</span>
+                <span><strong class="text-graphite font-medium">Pierwszy kontakt:</strong> zgłoszenie telefoniczne lub mailowe oraz umówienie dogodnego terminu rozmowy.</span>
+              </li>
+              <li class="flex gap-4">
+                <span class="font-serif text-xl text-graphite shrink-0">2.</span>
+                <span><strong class="text-graphite font-medium">Spotkanie w przedszkolu na Bemowie:</strong> możliwość obejrzenia sal, poznania naszego sposobu pracy oraz omówienia potrzeb dziecka.</span>
+              </li>
+              <li class="flex gap-4">
+                <span class="font-serif text-xl text-graphite shrink-0">3.</span>
+                <span><strong class="text-graphite font-medium">Złożenie dokumentów:</strong> wypełnienie karty zgłoszenia i przekazanie informacji ważnych dla opieki nad dzieckiem.</span>
+              </li>
+              <li class="flex gap-4">
+                <span class="font-serif text-xl text-graphite shrink-0">4.</span>
+                <span><strong class="text-graphite font-medium">Plan adaptacji:</strong> wspólne ustalenie harmonogramu pierwszych dni w grupie.</span>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Dokumenty -->
+          <article data-reveal class="p-8 sm:p-10 rounded-3xl bg-base border border-beige flex flex-col justify-between space-y-6">
+            <div class="space-y-6">
+              <span class="inline-block text-xs uppercase tracking-widest px-3.5 py-1 rounded-full bg-sage text-graphite">
+                Dokumenty
+              </span>
+              <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+                Wymagane dokumenty rekrutacyjne
+              </h3>
+              <p class="text-base sm:text-lg text-graphiteSoft leading-relaxed">
+                Komplet dokumentów udostępniamy rodzicom podczas spotkania informacyjnego lub przesyłamy drogą mailową po pierwszym kontakcie:
+              </p>
+              <ul class="space-y-3 text-base sm:text-lg text-graphiteSoft list-disc pl-5">
+                <li>Karta zgłoszenia dziecka do przedszkola [NAZWA]</li>
+                <li>Arkusz informacyjny o potrzebach rozwojowych, adaptacyjnych i żywieniowych dziecka</li>
+                <li>Upoważnienia do odbioru dziecka oraz zgody organizacyjne</li>
+              </ul>
+            </div>
+
+            <div class="pt-4">
+              <a href="#kontakt" class="inline-block px-7 py-4 rounded-full bg-graphite text-base font-medium hover:bg-graphiteSoft transition-colors">
+                Umów rozmowę rekrutacyjną
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="py-16 sm:py-24 lg:py-28 bg-sand border-t border-beige px-5 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <div data-reveal class="lg:col-span-5 space-y-8">
+            <div class="space-y-4">
+              <p class="text-xs uppercase tracking-widest text-graphiteSoft">Kontakt</p>
+              <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-graphite leading-tight font-normal">
+                Porozmawiajmy o potrzebach Twojego dziecka.
+              </h2>
+              <p class="text-lg text-graphiteSoft leading-relaxed">
+                Zapraszamy rodziców z Bemowa i okolic do kontaktu telefonicznego lub mailowego. Chętnie odpowiemy na pytania dotyczące codzienności w przedszkolu i procesu adaptacji.
+              </p>
+            </div>
+
+            <dl class="space-y-5 text-base sm:text-lg">
+              <div class="p-5 rounded-2xl bg-base border border-beige">
+                <dt class="text-xs uppercase tracking-widest text-graphiteSoft">Adres (Warszawa Bemowo)</dt>
+                <dd class="font-medium text-graphite mt-1">[ADRES]</dd>
+              </div>
+              <div class="p-5 rounded-2xl bg-base border border-beige">
+                <dt class="text-xs uppercase tracking-widest text-graphiteSoft">Telefon</dt>
+                <dd class="font-medium text-graphite mt-1">
+                  <a href="tel:[TELEFON]" class="hover:underline">[TELEFON]</a>
+                </dd>
+              </div>
+              <div class="p-5 rounded-2xl bg-base border border-beige">
+                <dt class="text-xs uppercase tracking-widest text-graphiteSoft">E-mail</dt>
+                <dd class="font-medium text-graphite mt-1">
+                  <a href="mailto:[E-MAIL]" class="hover:underline">[E-MAIL]</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div data-reveal class="lg:col-span-7">
+            <form action="#kontakt" method="post" class="p-8 sm:p-10 rounded-3xl bg-base border border-beige space-y-6">
+              <h3 class="font-serif text-2xl sm:text-3xl text-graphite font-normal">
+                Napisz do nas wiadomość
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="parent-name" class="block text-sm font-medium text-graphite mb-2">Imię i nazwisko rodzica</label>
+                  <input
+                    id="parent-name"
+                    name="parent-name"
+                    type="text"
+                    required
+                    class="w-full px-4 py-3.5 rounded-xl bg-sand/60 border border-beige text-graphite focus:outline-none focus:ring-2 focus:ring-graphite"
+                  >
+                </div>
+                <div>
+                  <label for="parent-contact" class="block text-sm font-medium text-graphite mb-2">Telefon lub adres e-mail</label>
+                  <input
+                    id="parent-contact"
+                    name="parent-contact"
+                    type="text"
+                    required
+                    class="w-full px-4 py-3.5 rounded-xl bg-sand/60 border border-beige text-graphite focus:outline-none focus:ring-2 focus:ring-graphite"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label for="topic" class="block text-sm font-medium text-graphite mb-2">Temat rozmowy</label>
+                <select
+                  id="topic"
+                  name="topic"
+                  class="w-full px-4 py-3.5 rounded-xl bg-sand/60 border border-beige text-graphite focus:outline-none focus:ring-2 focus:ring-graphite"
+                >
+                  <option value="rekrutacja">Rekrutacja i spotkanie zapoznawcze</option>
+                  <option value="adaptacja">Adaptacja i wsparcie dziecka w grupie</option>
+                  <option value="kuchnia">Kuchnia i potrzeby żywieniowe</option>
+                  <option value="inne">Inne pytanie organizacyjne</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-graphite mb-2">Wiadomość</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3.5 rounded-xl bg-sand/60 border border-beige text-graphite focus:outline-none focus:ring-2 focus:ring-graphite"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full sm:w-auto px-8 py-4 rounded-full bg-graphite text-base font-medium hover:bg-graphiteSoft transition-colors"
+              >
+                Wyślij wiadomość
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Stopka -->
+  <footer class="bg-base border-t border-beige py-12 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-sm text-graphiteSoft">
+      <div>
+        <p class="font-serif text-xl text-graphite">[NAZWA]</p>
+        <p class="mt-1">Przedszkole · Warszawa Bemowo · [ADRES] · [TELEFON] · [E-MAIL]</p>
+      </div>
+      <nav aria-label="Nawigacja w stopce" class="flex flex-wrap gap-5">
+        <a href="#o-przedszkolu" class="hover:text-graphite">O przedszkolu</a>
+        <a href="#jak-pracujemy" class="hover:text-graphite">Jak pracujemy</a>
+        <a href="#kuchnia" class="hover:text-graphite">Kuchnia</a>
+        <a href="#dla-rodzicow" class="hover:text-graphite">Dla rodziców</a>
+        <a href="#porady" class="hover:text-graphite">Porady</a>
+        <a href="#rekrutacja" class="hover:text-graphite">Rekrutacja</a>
+        <a href="#kontakt" class="hover:text-graphite">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Lenis + Motion One CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js"></script>
+
+  <script>
+    (function () {
+      // Obsługa menu mobilnego
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const menuLabel = document.getElementById('mobile-menu-label');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          if (menuLabel) {
+            menuLabel.textContent = isExpanded ? 'Menu' : 'Zamknij';
+          }
+        });
+
+        mobileLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.add('hidden');
+            if (menuLabel) {
+              menuLabel.textContent = 'Menu';
+            }
+          });
+        });
+      }
+
+      // Sprawdzenie prefers-reduced-motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealElements = document.querySelectorAll('[data-reveal]');
+
+      // Gwarancja pełnej widoczności wszystkich elementów (nic nie znika po 3 s)
+      function ensureAllVisible() {
+        revealElements.forEach(function (el) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          el.style.visibility = 'visible';
+        });
+      }
+
+      if (prefersReducedMotion) {
+        ensureAllVisible();
+        return;
+      }
+
+      // Płynne przewijanie Lenis
+      try {
+        if (typeof Lenis !== 'undefined') {
+          const lenis = new Lenis({
+            duration: 1.05,
+            smoothWheel: true
+          });
+
+          function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          }
+          requestAnimationFrame(raf);
+        }
+      } catch (e) {
+        // Fallback do natywnego przewijania
+      }
+
+      // Subtelne wejścia przy przewijaniu z Motion One
+      try {
+        if (window.Motion && typeof window.Motion.inView === 'function' && typeof window.Motion.animate === 'function') {
+          revealElements.forEach(function (el) {
+            window.Motion.inView(
+              el,
+              function () {
+                window.Motion.animate(
+                  el,
+                  { opacity: [0.85, 1], transform: ['translateY(14px)', 'translateY(0px)'] },
+                  { duration: 0.55, easing: 'ease-out' }
+                );
+              },
+              { amount: 0.15 }
+            );
+          });
+        }
+      } catch (e) {
+        ensureAllVisible();
+      }
+
+      // Dodatkowe zabezpieczenie gwarantujące 100% widoczności przed upływem 3 sekund
+      setTimeout(ensureAllVisible, 2000);
+    })();
+  </script>
+</body>
+</html>
